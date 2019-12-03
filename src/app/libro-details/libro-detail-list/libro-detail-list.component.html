@@ -1,0 +1,11 @@
+<table class="table table-hover">
+        <tr *ngFor="let pd of service.list">
+          <td (click)="populateForm(pd)">{{pd.Nombre_Libro}}</td>
+          <td (click)="populateForm(pd)">{{pd.AutorId}}</td>
+          <td (click)="populateForm(pd)">{{pd.CategoriaId}}</td>
+          <td (click)="populateForm(pd)">{{pd.ISBN}}</td>
+          <td>
+            <i class="far fa-trash-alt fa-lg text-danger" (click)="onDelete(pd.Id)"></i>
+          </td>
+        </tr>
+      </table>
