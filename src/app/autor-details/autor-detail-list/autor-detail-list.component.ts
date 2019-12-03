@@ -18,6 +18,8 @@ export class AutorDetailListComponent implements OnInit {
     }
     populateForm(pd: AutorDetail) {
       this.service.formData = Object.assign({}, pd);
+      this.service.formData.Fecha_Nacimiento = this.service.formData.Fecha_Nacimiento.substring(0,10);
+
     }
 
     onDelete(id) {
